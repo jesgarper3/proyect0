@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thyleaf.org">
+<style>
+	table {
+		border-collapse: collapse;
+		margin: 0 auto;
+		/* Margen automático para centrar horizontalmente */
+
+	}
+
+	td,
+	th {
+		border: 1px solid darkgray;
+		padding: 8px;
+		text-align: center;
+	}
+</style>
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${tituloHeader}"></title>
+</head>
+
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<p th:if="${animales.isEmpty()}">
+		<span th:text="${textoListaVacia}"></span>
+	</p>
+</body>
+
+<table th:if="${!animales.isEmpty()}">
+	<theader>
+		<tr>
+			<td><strong>Tipo</strong></td>
+			<td><strong>Precio (€)</strong></td>
+			<td><strong>Peso (gr.)</strong></td>
+
+		</tr>
+
+
+	</theader>
+	<tbody>
+		<tr th:each="animal : ${animales}">
+			<td th:text="${animal.tipo}"></td>
+			<td th:text="${animal.precioEuros}"></td>
+			<td th:text="${animal.pesoGramos}"></td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+</html>

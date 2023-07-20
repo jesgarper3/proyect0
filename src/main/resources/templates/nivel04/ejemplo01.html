@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+	
+<meta charset="UTF-8">
+	<title th:text="${titulo}"></title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"></link>
+</head>
+
+<body>
+	<h1 class= "color-rojo" th:text="${cabecera}"></h1>
+	<p class= "color-azul" th:text="${texto}"></p>
+	<img th:src="@{/images/spring.png}" alt="Imagen de Spring para demo"></img>
+	
+	<p class= "color-azul" th:text="${valor}"></p>
+	
+	
+	
+</body>
+
+</html>

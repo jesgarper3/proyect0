@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${titulo}"></title>
+</head>
+
+<body>
+	<div th:if="${animal != null}">
+		<h1 th:text="${cabecera}"></h1>
+	</div>
+	<div th:if="${animal == null}">
+		<h1 th:text="${cabeceraSinGato}"></h1>
+	</div>
+	<div th:if="${animal != null}">
+		<p th:text="${texto}"></p>
+	</div>
+	<div th:if="${animal == null}">
+		<p th:text="${textoSinGato}"></p>
+	</div>
+	
+	<ul th:if="${animal != null}">
+		<li>Tipo: <span th:text="${animal.tipo}"></span></li>
+		<li>Peso (gr): <span th:text="${animal.pesoGramos}"></span></li>
+		<li>Precio(€): <span th:text="${animal.precioEuros}"></span></li>
+	</ul>
+</body>
+
+</html>

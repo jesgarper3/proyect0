@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+	
+<meta charset="UTF-8">
+	<title th:text="${titulo}"></title>
+	
+</head>
+
+<body>
+	<h1 th:text="${cabecera}"></h1>
+	<p th:text="${texto}"></p>
+	
+	
+	<p th:text="${valor}"></p>
+	<ul>
+		<li><a th:href="@{/animales/listado-flexible4} + '?cantidad=5&tipo=perro'">/animales/listado-flexible4?cantidad=5&tipo=perro</a></li>
+		<li><a th:href="@{/varios/ejemplo2/} + 'Javier Pérez'">/varios/ejemplo2/Javier Pérez</a></li>
+		<li><a th:href="@{/varios/ejemplo2/} + 'Javier/Pérez'">/varios/ejemplo2/Javier/Pérez</a></li>
+	</ul>
+</body>
+
+</html>
